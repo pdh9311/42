@@ -11,31 +11,44 @@
     모든 항목을 피봇(pivot)이랑 비교하니까 정확히는 n-1번인데, 편의상 n번이라고 하자.  
     그리고 반을 갈라서, 각각 반을 동일한 연산을 수행하므로 전체 수행 시간은.  
     n번 더하기 반에대한 동일연산을 두번 수행한 것이므로 아래와 같다.  
-
-    $$
-    \begin{align}T(n) \ &= \ 2T(\frac{n}{2}) \ + \ n\\
+```math
+    \begin{align}
+    T(n) \ &= \ 2T(\frac{n}{2}) \ + \ n\\
     &= \ 2(2T(\frac{n}{4}) \ + \ \frac{n}{2} \ ) \ + \ n \ = \ 4T(\frac{n}{4}) \ +2n\\
     &= \ 4(2T(\frac{n}{8}) \ + \ \frac{n}{4} \ ) \ + \ n \ = \ 8T(\frac{n}{8}) \ +3n\\
     & \ \  \  \  \  ...\\
-    &= \ 2^{x}T(\frac{n}{2^{x}}) \ + \ xn\end{align}\\\\
-    if \ n = 2^{x}, x = \log_2 n \ \rightarrow \ 2^{\log_2 n}T(1) + n\log_2 n\\\\
-    \because \ T(1)=1, \  T(n) \ = \ n+n\log_2 n\\
+    &= \ 2^{x}T(\frac{n}{2^{x}}) \ + \ xn
+    \end{align}
+```
+```math
+    if \ n = 2^{x}, x = \log_2 n \ \rightarrow \ 2^{\log_2 n}T(1) + n\log_2 n
+```
+```math
+    \because \ T(1)=1, \  T(n) \ = \ n+n\log_2 n
+```
+```math
     \therefore \ O(n\log n)
-    $$
-
+```
 - pivot = 2 인 경우
-
-    $$
-    \begin{align}T(n) \ &= \ 3T(\frac{n}{3}) \ + \ 2n\\
+```math
+    \begin{align}
+    T(n) \ &= \ 3T(\frac{n}{3}) \ + \ 2n\\
     &= \ 3(3T(\frac{n}{9}) \ + \ 2*\frac{n}{3} \ ) \ + \ 2n \ = \ 9T(\frac{n}{9}) \ +4n\\
     &= \ 9(3T(\frac{n}{27}) \ + \ 2*\frac{n}{9} \ ) \ + \ 4n \ = \ 27T(\frac{n}{27}) \ +6n\\
     & \ \  \  \  \  ...\\
-    &= \ 3^{x}T(\frac{n}{3^{x}}) \ + \ 2xn\end{align}\\\\
-    if \ n = 3^{x}, x = \log_3 n \ \rightarrow \ 3^{\log_3 n}T(1) + 2n\log_3 n\\\\
-    \because \ T(1)=1, \  T(n) \ = \ n+2n\log_3 n\\
+    &= \ 3^{x}T(\frac{n}{3^{x}}) \ + \ 2xn
+    \end{align}
+```
+```math
+    if \ n = 3^{x}, x = \log_3 n \ \rightarrow \ 3^{\log_3 n}T(1) + 2n\log_3 n
+```
+```math
+    \because \ T(1)=1, \  T(n) \ = \ n+2n\log_3 n
+```
+```math
     \therefore \ O(n\log n)
     $$
-
+```
 이와 같이 pivot이 1인 경우와 2인경우의 Big-O 표기법은 같지만 실제로 pivot이 2인 경우는 log의 밑이 3으로 아래의 그래프를 보더라도 데이터의 수(x)가 많아질수록 시간(y)이 적게 걸린다는 것을 알 수 있다.
 
 ![](readme-image/log_2_3.png)
