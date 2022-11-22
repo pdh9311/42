@@ -97,3 +97,7 @@ any input with ; or \ are syntax error.
 
 # Diagram #
 ![Untitled Diagram drawio](https://user-images.githubusercontent.com/83530766/142713997-1d859eb4-43f8-4737-833b-8de1b0e59c34.png)
+
+---
+## 배운내용 Notion에서 확인
+https://donpark.notion.site/minishell-1c2b003889a142a7a9295ad5a22f0bbf
