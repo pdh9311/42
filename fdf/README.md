@@ -53,3 +53,6 @@ xclock                                                  ## xclock 실행
 3. `minilibx-linux/test/` 폴더에 `./mlx-test` 실행시 아래와 같이 3개의 창이 생성되면 시작 단계 완료!!
     ![](readme-image/mlx-test.png)
 
+---
+## 배운내용 Notion에서 확인
+https://donpark.notion.site/fdf-116-102-14day-1d063797e9e54fb99449803d95978cb8
