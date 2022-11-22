@@ -12,9 +12,12 @@ fi
 if [ ! -f "/var/www/wordpress/wp-config.php" ]; then
     # wordpress 설치
     wp core download --locale=ko_KR --allow-root --path=/var/www/wordpress
+    
     # wp-config.php 파일 생성과 동시에 설정
     wp config create --dbname=$MARIADB_WP_DB --dbuser=$MARIADB_USER --dbpass=$MARIADB_USER_PW --dbhost=$MARIADB_HOST --allow-root --path=/var/www/wordpress
+
     wp core install --url=$DOMAIN_NAME --title=$WP_TITLE --admin_user=$WP_ADMIN_ID --admin_password=$WP_ADMIN_PW --admin_email=$WP_ADMIN_EMAIL  --allow-root --path=/var/www/wordpress
+
     wp user create $WP_USER_ID $WP_USER_EMAIL --role=author --user_pass=$WP_USER_PW --allow-root --path=/var/www/wordpress
     chown -R www-data:www-data /var/www/wordpress/
 fi
