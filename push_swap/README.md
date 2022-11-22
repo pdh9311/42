@@ -26,13 +26,11 @@
 - pivot = 2 인 경우
 
     $$
-    \begin{align}
-    T(n) \ &= \ 3T(\frac{n}{3}) \ + \ 2n\\
+    \begin{align}T(n) \ &= \ 3T(\frac{n}{3}) \ + \ 2n\\
     &= \ 3(3T(\frac{n}{9}) \ + \ 2*\frac{n}{3} \ ) \ + \ 2n \ = \ 9T(\frac{n}{9}) \ +4n\\
     &= \ 9(3T(\frac{n}{27}) \ + \ 2*\frac{n}{9} \ ) \ + \ 4n \ = \ 27T(\frac{n}{27}) \ +6n\\
     & \ \  \  \  \  ...\\
-    &= \ 3^{x}T(\frac{n}{3^{x}}) \ + \ 2xn
-    \end{align}\\\\
+    &= \ 3^{x}T(\frac{n}{3^{x}}) \ + \ 2xn\end{align}\\\\
     if \ n = 3^{x}, x = \log_3 n \ \rightarrow \ 3^{\log_3 n}T(1) + 2n\log_3 n\\\\
     \because \ T(1)=1, \  T(n) \ = \ n+2n\log_3 n\\
     \therefore \ O(n\log n)
