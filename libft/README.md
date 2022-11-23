@@ -52,6 +52,8 @@ Linked List
 - ft_lstiter
 - ft_lstmap
 
+## 실행 방법
+-  라이브러리를 아카이브 파일로 생성하는 명령어 : `make` 또는 `make bonus`
 
 ---
 ## 배운내용 Notion에서 확인
