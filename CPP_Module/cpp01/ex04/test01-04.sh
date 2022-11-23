@@ -1,0 +1,1 @@
+	./replace FILENAME "abc" "ABCD"

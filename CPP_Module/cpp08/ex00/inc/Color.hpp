@@ -1,0 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Color.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: donpark <donpark@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/29 10:14:26 by donpark           #+#    #+#             */
+/*   Updated: 2022/03/29 10:16:48 by donpark          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef COLOR_HPP
+# define COLOR_HPP
+
+# define C_NC		"\033[0m"
+# define C_BLOCK	"\033[30m"
+# define C_RED		"\033[31m"
+# define C_GREEN	"\033[32m"
+# define C_YELLOW	"\033[33m"
+# define C_BLUE		"\033[34m"
+# define C_PURPLE	"\033[35m"
+# define C_AQUA		"\033[36m"
+
+#endif
